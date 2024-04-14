@@ -79,3 +79,23 @@ button:disabled {
   background-color: #bfbfbf;
   cursor: not-allowed;
 }
+
+button.save {
+  background-color: #3dbf3d;
+  grid-column: span 2;
+  color: #fff;
+}
+
+button.save:hover {
+  background-color: #2d9d2d;
+}
+
+button.reload {
+  background-color: #3dbf3d;
+  grid-column: span 2;
+  color: #fff;
+}
+
+button.reload:hover {
+  background-color: #2d9d2d;
+}

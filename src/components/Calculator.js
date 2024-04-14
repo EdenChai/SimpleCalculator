@@ -14,6 +14,7 @@ function Calculator()
      */
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('Welcome to My Simple Calculator!');
+    const [res, setResult] = useState('');
 
     // The function that called whenever a digit button is clicked and concatenates the button's name to the input state variable.
     const handleDigitClick = (digit) => 
@@ -80,6 +81,17 @@ function Calculator()
         }
     };
 
+    const handleSave = () =>
+    {
+        setResult(output);
+    }
+
+    const handleReload = () =>
+    {
+        setOutput(res);
+
+    }
+
     // Render the calculator UI
     return (
         <div className="calculator">
@@ -102,6 +114,8 @@ function Calculator()
                 <button onClick={() => handleDigitClick('0')} className='zero'>0</button>
                 <button onClick={() => handleDigitClick('.')}>.</button>
                 <button onClick={() => handleOperatorClick('+')} className='operator'>+</button>
+                <button onClick={handleSave} className='save'>Save</button>
+                <button onClick={handleReload} className='reload'>Reload</button>
                 <button className="equal" onClick={handleEqualsClick}>=</button>
                 <button className="clear" onClick={handleClearClick}>CE</button>
             </div>
